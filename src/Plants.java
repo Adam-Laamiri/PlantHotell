@@ -1,5 +1,11 @@
+    // INTERFACE: Plants implementerar interfacet Waterable.
+    // Det innebär att klassen måste tillhandahålla metoden calculate()
+    // som deklareras i interfacet.
 public abstract class Plants implements Waterable {
 
+    // INKAPSLING: Fälten är private, vilket hindrar andra klasser
+    // från att komma åt dem direkt. Informationen skyddas och
+    // läses via publika getter-metoder, exempelvis getHeight().
     private final PlantName name;
     private final PlantType plantType;
     private final double height;

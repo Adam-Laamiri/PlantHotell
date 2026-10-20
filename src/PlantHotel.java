@@ -1,8 +1,14 @@
 import java.util.HashMap;
 import java.util.Map;
 
+// ARV: PlantHotel ärver från AmountOfLiquid med "extends".
+// Det innebär att PlantHotel får tillgång till den publika metoden
+// findLiquid() utan att behöva implementera den själv.
+
 public class PlantHotel extends AmountOfLiquid {
 
+    // INKAPSLING: Fälten är private så att de inte kan nås direkt
+    // från andra klasser. Klassen styr själv hur informationen används.
     private final PlantName plantName;
     private final Map<PlantName, Plants> plantItems;
 
@@ -51,7 +57,10 @@ public class PlantHotel extends AmountOfLiquid {
             return -1.0;
         }
 
-        // Polymorfism: rätt calculate() anropas för växtens klass.
+        // POLYMORFISM: Variabeln plant har referenstypen Plants,
+        // men kan referera till ett objekt av typen Palm, Cactus
+        // eller Carnivor. Därför anropas rätt implementation av
+        // calculate() beroende på vilken typ objektet faktiskt har.
         return plant.calculate();
     }
 
