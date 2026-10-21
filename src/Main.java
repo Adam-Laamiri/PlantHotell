@@ -31,17 +31,4 @@ public class Main {
 
         scanner.close();
     }
-
-    //rolig typewriter animation
-    /*
-    public static void typePrintln(String text) throws InterruptedException {
-        for (char c : text.toCharArray()) {
-            System.out.print(c);
-            System.out.flush();
-            Thread.sleep(50);
-        }
-        System.out.println();
-    }
-
-     */
 }
